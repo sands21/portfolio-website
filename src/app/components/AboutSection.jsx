@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import Link from "next/link";
 
 const TAB_DATA = [
   {
@@ -36,8 +37,22 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Prompt Engineering for ChatGPT</li>
-        <li>Data Analysis with Python</li>
+        <li><Link
+              rel="noopener noreferrer" target="_blank" 
+              href = "https://coursera.org/share/69153f2c3f211ed5a49d486827b98c10">
+              Prompt Engineering for ChatGPT 
+              </Link> </li>
+        <li><Link
+              rel="noopener noreferrer" target="_blank" 
+              href = "https://coursera.org/share/0d851da59ba5457edbf02a330c2617e4">
+              Data Analysis with Python
+              </Link> </li>
+        <li><Link
+              rel="noopener noreferrer" target="_blank" 
+              href = "https://coursera.org/share/259301ae129b845e0ea6abd88562019c">
+              Generative AI: Prompt Engineering Basics
+              </Link> </li>
+        
       </ul>
     ),
   },
@@ -60,7 +75,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-           I am a full stack app and web developer. I enjoy creating seamless, user-friendly experiences. I have experience working with Kotlin, Dart, Javascript, React, next.js and python. I am a team player and I am excited to work with others to create amazing applications.
+           I am a full stack app and web developer. I enjoy creating seamless, user-friendly experiences. I have experience working with Flutter, Javascript, React, next.js and python among others. I am generally excited to work with others to create well rounded applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

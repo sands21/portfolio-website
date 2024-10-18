@@ -4,6 +4,9 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Fira_Code } from 'next/font/google';
+
+const jetBrains = Fira_Code({ subsets: ['latin'] });
 
 const HeroSection = () => {
   return (
@@ -15,26 +18,28 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-600">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal ">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-600 font-extrabold">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
+            <span className={jetBrains.className}>
             <TypeAnimation
               sequence={[
                 "Rajarshi",
                 1000,
-                "Web Developer",
+                "a Web Developer",
                 1000,
-                "App Developer",
+                "an App Developer",
                 1000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
+            </span>
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl mr-10">
           Crafting code that makes your apps smoother than your morning coffee – mobile or web, I&apos;ve got it covered!
           </p>
           <div>
@@ -46,7 +51,7 @@ const HeroSection = () => {
             </Link>
             <Link
               rel="noopener noreferrer" target="_blank"
-              href="https://drive.google.com/file/d/1QAhF2cM9qQmpdu--aJiUOzgsBKbwzmC1/view?usp=sharing"
+              href="https://drive.google.com/file/d/1c3r8LBd6KqI86eV1QMuHUtEo2Er4FURH/view?usp=sharing"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
