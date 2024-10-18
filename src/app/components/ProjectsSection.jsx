@@ -19,7 +19,7 @@ const projectsData = [
     description: "Portfolio website made using Next.js",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/sands21/youtube-clone.git",
+    gitUrl: "https://github.com/sands21/portfolio-website.git",
   },
   {
     id: 3,

@@ -35,7 +35,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Crafting code that makes your apps smoother than your morning coffee – mobile or web, I've got it covered!
+          Crafting code that makes your apps smoother than your morning coffee – mobile or web, I&apos;ve got it covered!
           </p>
           <div>
             <Link
