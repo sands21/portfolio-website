@@ -4,6 +4,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import Swal from 'sweetalert2';
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -17,17 +18,12 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
-    // const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
@@ -35,7 +31,11 @@ const EmailSection = () => {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log("Message sent.");
+      Swal.fire({
+        title: "Success!",
+        text: "Message  sent successfully!",
+        icon: "success"
+      });
       setEmailSubmitted(true);
     }
   };
